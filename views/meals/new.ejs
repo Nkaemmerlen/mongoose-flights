@@ -5,17 +5,18 @@
 <main>
   <p>
     Please first ensure that the meal is not in the dropdown 
-    <ul>
-      <% meals.forEach(meal => { %>
-        <li><%= meal.name %></li>
-      <% }) %>
-      </ul>
   </p>
   <form id="add-meal-form" action="/meals" method="post">
     <label for="name-input">Meal:</label>
     <input type="text" name="name" id="name-input">
     <button type="submit">Add Meal</button>
   </form>
+  <ul>
+    <h3>Meals added</h3>
+    <% meals.forEach(meal => { %>
+      <li><%= meal.name %></li>
+    <% }) %>
+  </ul>
 </main>
 
 <%- include('../partials/footer') %>

@@ -1,4 +1,3 @@
-
 import { Meal } from "../models/meal.js"
 
 function newMeal(req, res) {
@@ -9,6 +8,13 @@ function newMeal(req, res) {
     })
   })
 }
+
+function create(req, res) {
+  Meal.create(req.body, function (err, meal) {
+    res.redirect('/meals/new')
+  })
+}
 export {
-  newMeal
+  newMeal,
+  create
 }

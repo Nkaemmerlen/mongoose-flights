@@ -5,13 +5,13 @@
 <main>
   <p>
     Please first ensure that the meal is not in the dropdown 
-    <select>
+    <ul>
       <% meals.forEach(meal => { %>
-        <option><%= meal.name %></option>
+        <li><%= meal.name %></li>
       <% }) %>
-    </select>
+      </ul>
   </p>
-  <form id="add-performer-form" action="/flights" method="post">
+  <form id="add-meal-form" action="/meals" method="post">
     <label for="name-input">Meal:</label>
     <input type="text" name="name" id="name-input">
     <button type="submit">Add Meal</button>
